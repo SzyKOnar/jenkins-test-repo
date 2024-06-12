@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "Building the project..."'
-                // Komendy budowania projektu, np. kompilacja kodu
+               
             }
         }
         stage('Test') {
@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'echo "Deploying the project..."'
-                // Komendy wdrażania, np. kopiowanie plików, restartowanie serwera
+            
             }
         }
     }
