@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/twoje-repozytorium.git', credentialsId: 'twoje-poświadczenia'
+                git url: 'https://github.com/SzyKOnar/jenkins-test-repo.git', credentialsId: 'twoje-poświadczenia'
             }
         }
         stage('Build') {
