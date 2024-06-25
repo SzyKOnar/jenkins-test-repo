@@ -4,25 +4,17 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/SzyKOnar/jenkins-test-repo.git', branch: 'main'
+                git url: 'https://github.com/twoje-repozytorium.git', credentialsId: 'twoje-poświadczenia'
             }
         }
         stage('Build') {
             steps {
-                sh 'echo "Building the project..."'
-               
+                sh 'make build' // lub inna komenda budowania
             }
         }
         stage('Test') {
             steps {
-                sh 'echo "Running tests..."'
-                sh 'python3 -m unittest discover -s . -p "test_*.py"'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh 'echo "Deploying the project..."'
-            
+                sh 'make test' // lub inna komenda uruchamiająca testy
             }
         }
     }
