@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'make build' // lub inna komenda budowania
+                sh 'make build'
             }
         }
         stage('Test') {
             steps {
-                sh 'make test' // lub inna komenda uruchamiająca testy
+                sh 'make test' 
             }
         }
     }
