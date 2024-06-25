@@ -4,19 +4,18 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/SzyKOnar/jenkins-test-repo.git', credentialsId: 'twoje-poświadczenia'
+                git url: 'https://github.com/SzyKOnar/jenkins-test-repo.git', branch: 'main', credentialsId: 'twoje-poświadczenia'
             }
         }
         stage('Build') {
             steps {
-                sh 'make build'
+                sh 'echo "Build stage"' 
             }
         }
         stage('Test') {
             steps {
-                sh 'make test' 
+                sh 'echo "Test stage"' 
             }
         }
     }
 }
-//zmiana
